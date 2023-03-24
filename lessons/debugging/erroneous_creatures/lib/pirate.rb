@@ -10,7 +10,9 @@ class Pirate
   end
 
   def cursed?
-    @cursed >= 3
+    if @cursed >= 4
+      cursed? = true
+    end
   end
 
   def commit_heinous_act

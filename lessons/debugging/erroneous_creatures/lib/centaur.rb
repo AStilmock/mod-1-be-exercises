@@ -6,6 +6,7 @@ class Centaur
   def initialize(name, breed, standing=true, laying=false, sleeping=false)
     @name = name
     @breed = breed
+    @crankiness = 0
     @standing = standing
     @laying = laying
     @sleeping = sleeping
@@ -31,9 +32,9 @@ class Centaur
 
   def cranky?
     if @crankiness < 3
-      "false"
+      false
     else
-      "true"
+      true
     end
   end
 
@@ -42,7 +43,7 @@ class Centaur
   end
 
   def sleep
-    if @standing
+    if @standing == true
       "NO!"
     else
       @sleeping = true
