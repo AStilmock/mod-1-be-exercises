@@ -16,7 +16,7 @@ class Curator
 
   def find_artist_by_id(id)
     @artists.find do |art|
-      art.include?(id)
+      art.id.include?(id)
     end
   end
 end
